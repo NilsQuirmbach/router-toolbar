@@ -1,3 +1,12 @@
 <h1>
   {{title}}
 </h1>
+
+<div>
+  <a routerLink="/">Home</a>
+  <a routerLink="/info">Info</a>
+</div>
+
+<app-toolbar #toolBar></app-toolbar>
+
+<router-outlet (activate)="toolBar.onRouteChanged($event)"></router-outlet>

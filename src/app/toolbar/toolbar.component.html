@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let button of buttons">
+    <button (click)="button.callback.call(this, $event)">{{button.text}}</button>
+  </li>
+</ul>
